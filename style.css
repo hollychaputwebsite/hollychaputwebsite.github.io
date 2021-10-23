@@ -13,7 +13,10 @@ hr {
 	margin: 25px;
 }
 .unselectable {
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 /* Sidebar menu */
 .menu-button {
@@ -34,7 +37,7 @@ hr {
 	width: 100%;
 	text-align: center;
 	color: white;
-	pointer-events: none;
+	pointer-events: none; /* Cursor interacts with background */
 	/* Mobile styling */
 	font-size: 20pt;
 }
@@ -45,6 +48,9 @@ hr {
 	background-color: black;
 	opacity: .5;
 	border-radius: 5px 5px 5px 5px;
+	/* Animate opacity of background */
+	-webkit-transition: opacity .15s;
+	-o-transition: opacity .15s;
 	transition: opacity .15s;
 }
 .menu-button-background:hover {
@@ -55,8 +61,11 @@ hr {
 	top: 0;
 	height: 100vh;
 	background-color: #141414;
-	box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .1);
+	        box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .1);
 	overflow-y: auto;
+	-webkit-transition: left 0.5s;
+	-o-transition: left 0.5s;
 	transition: left 0.5s;	
 	/* Position above overlay */
 	z-index: 3;
@@ -71,6 +80,8 @@ hr {
 }
 .menu-link {
 	color: white;
+	-webkit-transition: background-color .05s;
+	-o-transition: background-color .05s;
 	transition: background-color .05s;
 	/* Mobile styling */
 	font-size: 12pt;
@@ -96,6 +107,8 @@ hr {
 	/* Animate opacity when menu is opened*/
 	background-color: black;
 	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 	/* Ignore cursor when not shown */
 	pointer-events: none;
@@ -104,16 +117,27 @@ hr {
 .page {
 	min-height: 100vh;
 	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .panel-container {
 	width: 100vw;
-	
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .panel {
 	height: 100%;
@@ -127,26 +151,37 @@ hr {
 	padding: 35px 25px 35px 25px;
 }
 .panel-image {
-	object-fit: cover;
-	object-position: top;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: top;
+	   object-position: top;
 	width: 100%;
+	/* Mobile styling */
 	height: 50vh;
 }
 .panel-image-gradient {
 	position: absolute; 
 	height: 100%; 
 	width: 100%; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.1)), to(rgba(0,0,0,0))); 
+	background-image: -o-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0)); 
 	background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,0));
 }
 /* Footer */
 .footer {
 	color: #808080;
 	background-color: #141414;
-	align-self: flex-end;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .footer-entry {
 	width: 100%;
@@ -162,6 +197,8 @@ hr {
 	font-size: 16pt;
 	text-align: center;
 	margin-right: 15px;
+	-webkit-transition: color .15s;
+	-o-transition: color .15s;
 	transition: color .15s;
 }
 .footer-icon:hover {
@@ -254,7 +291,6 @@ hr {
 .snapwidget-desktop {
 	display: none;
 }
-
 /* Desktop styling */
 @media only screen and (min-width: 960px) {
 	.menu-button {
@@ -282,11 +318,14 @@ hr {
 	}
 	.panel-container {
 		height: 1px;
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 	}
 	.panel {
 		width: 50vw;
-		box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
+		-webkit-box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
+		        box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
 	}
 	.panel-padding {
 		padding: 80px 60px 80px 60px;
