@@ -242,13 +242,11 @@ hr {
 }
 /* Istagram feed */
 .snapwidget-container {
-	margin: auto;
+	margin-top: 45px;
 	cursor: pointer;
-	/* Mobile styling */
-	width: 100%;
 }
 .snapwidget-widget {
-	/*pointer-events: none; */
+	pointer-events: none;
 }
 .snapwidget-mobile {
 	display: block;
@@ -312,7 +310,6 @@ hr {
 	.contact-icon a {
 		color: black;
 	}
-	
 	.contact-text {
 		line-height: 24pt;
 	}
