@@ -120,6 +120,7 @@ hr {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex: 0 0 auto;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
@@ -327,6 +328,11 @@ hr {
 		-webkit-box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
 		        box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
 	}
+	@media not all and (min-resolution:.001dpcm) { @media {
+		.panel { 
+			height: auto;
+		}
+	}}
 	.panel-padding {
 		padding: 80px 60px 80px 60px;
 	}
