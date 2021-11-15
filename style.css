@@ -129,6 +129,7 @@ hr {
 }
 .left-panel {
 	background-size: cover;
+	background-position: center;
 	/* Mobile styling */
 	height: 50vh;
 }
