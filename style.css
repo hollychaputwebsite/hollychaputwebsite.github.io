@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #141414;
+	overflow-x: hidden;
 }
 body, html {
 	height: auto;
@@ -129,7 +130,7 @@ hr {
 }
 .left-panel {
 	background-size: cover;
-	background-position: center;
+	background-position: top center;
 	/* Mobile styling */
 	height: 50vh;
 }
