@@ -2,6 +2,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
+	background-color: #141414;
 }
 body, html {
 	height: auto;
@@ -116,64 +117,53 @@ hr {
 /* Page content */
 .page {
 	min-height: 100vh;
-	width: 100vw;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	flex: 0 0 auto;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
 }
 .panel-container {
 	width: 100vw;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
 }
 .panel {
-	height: 100%;
-	overflow-y: auto;
 	background-color: #f2f2f2;
 	/* Mobile styling */
-	width: 100%;
-	position: relative;	
+	width: 100vw;
+	height: min-content;
+}
+.left-panel {
+	background-size: cover;
+	/* Mobile styling */
+	height: 50vh;
+}
+.right-panel {
+	
 }
 .panel-padding {
 	padding: 35px 25px 35px 25px;
 }
-.panel-image {
-	-o-object-fit: cover;
-	   object-fit: cover;
-	-o-object-position: top;
-	   object-position: top;
-	width: 100%;
-	/* Mobile styling */
-	height: 50vh;
-}
 .panel-image-gradient {
-	position: absolute; 
 	height: 100%; 
 	width: 100%; 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.1)), to(rgba(0,0,0,0))); 
 	background-image: -o-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0)); 
 	background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,0));
 }
+.home-panel {
+	background-image: url("images/home-image.png");
+}
+.about-panel {
+	background-image: url("images/about-image.png");
+}
+.music-panel {
+	background-image: url("images/music-image.png");
+}
+.lessons-panel {
+	background-image: url("images/lessons-image.png");
+}
+.contact-panel {
+	background-image: url("images/contact-image.png");
+}
 /* Footer */
 .footer {
 	color: #808080;
 	background-color: #141414;
-	-ms-flex-item-align: end;
-	    align-self: flex-end;
 	width: 100vw;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -317,27 +307,25 @@ hr {
 		font-size: 14pt;
 		padding: 25px;
 	}
-	.panel-container {
-		height: 1px;
-		-webkit-box-flex: 1;
-		    -ms-flex-positive: 1;
-		        flex-grow: 1;
-	}
 	.panel {
 		width: 50vw;
+		height: 90vh;
+		overflow-y: auto;	
 		-webkit-box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
 		        box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
 	}
-	@media not all and (min-resolution:.001dpcm) { @media {
-		.panel { 
-			height: auto;
-		}
-	}}
 	.panel-padding {
 		padding: 80px 60px 80px 60px;
 	}
-	.panel-image {
-		height: 100%;
+	.left-panel {
+		float: left;
+	}
+	.right-panel {
+		float: right;
+	}
+	.footer {
+		position: fixed;
+		bottom: 0;
 	}
 	.footer-entry {
 		width: auto;
