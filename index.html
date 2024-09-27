@@ -23,88 +23,109 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- SnapWidget -->
-		<script src="https://snapwidget.com/js/snapwidget.js"></script>
 		<!-- Title -->
-		<title>Holly Channell: Home</title>
+		<title>Holly Channell: Not Just a Standard</title>
+		<style>
+			.page-container {
+				background-color: #f2f2f2;
+				height: 100vh;
+				width: 100wh;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				background-image: url("images/not-just-a-standard-background.png");
+			}
+			.page-content {
+					-ms-flex-item-align: center;
+					    -ms-grid-row-align: center;
+					    align-self: center;
+				margin: auto;
+				width: 1200px;
+				max-width: 100%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+					-ms-flex-wrap: wrap;
+					    flex-wrap: wrap;
+						-webkit-box-pack: center;
+						    -ms-flex-pack: center;
+						        justify-content: center;
+			}
+			.page-entry {
+				width: 560px;
+				max-width: 100%;
+				padding: 20px;
+			}
+			.page-entry-full {
+				max-width: 100%;
+				padding: 20px;
+			}
+			.page-image {
+				width: 100%;
+						-webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+								box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+			}
+			.page-image-entry {
+				text-align: center;
+				padding-bottom: 0;
+			}
+			.continue-button {
+				width: 200px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				border-radius: 5px;
+				color: white;
+				background-color: rgba(255, 255, 255, .25);
+				transition: background-color .15s;
+			}
+			.continue-button:hover {
+				background-color: rgba(255, 255, 255, .35);
+				cursor: pointer;
+			}
+			a {
+				color: white;
+			}
+		</style>
 	</head>
-	<body>
-		<!-- Sidebar menu button -->
-		<div class="menu-button unselectable" onclick="openMenu();">
-			<div class="menu-button-background"></div>
-			<div class="menu-button-icon">≡</div>
-		</div>
-		<!-- Sidebar menu overlay -->
-		<div class="overlay" id="overlay" onclick="closeMenu();"></div>
-		<!-- Sidebar menu -->
-		<div class="menu menu-hidden unselectable" id="menu">
-			<div class="menu-link menu-link-active" onclick="closeMenu();">HOME</div>
-			<div class="menu-link" onclick="location.href='about.html';">ABOUT</div>
-			<div class="menu-link" onclick="location.href='music.html';">MUSIC</div>
-			<div class="menu-link" onclick="location.href='photos.html';">PHOTOS</div>
-			<div class="menu-link" onclick="location.href='calendar.html';">CALENDAR</div>
-			<div class="menu-link" onclick="location.href='lessons.html';">LESSONS</div>
-			<div class="menu-link" onclick="location.href='contact.html';">CONTACT</div>
+	<body onload="loaded()">
+		<!-- Loading screen -->
+		<div class="loading-screen unselectable" id="loading-screen">
+			<div class="loading-circle"></div>
+			<div class="loading-circle" style="animation-delay: -.15s"></div>
 		</div>
 		<!-- Page content -->
-		<div class="page home-page">
-			<div class="panel-container">
-				<div class="panel left-panel home-panel">
-					<div class="panel-image-gradient"></div>
+		<div class="page-container">
+			<div class="page-content">
+				<div class="page-entry page-image-entry">
+					<img 
+						class="page-image"
+						src="images/not-just-a-standard.jpg" 
+						alt="Not Just a Standard cover image">
 				</div>
-				<div class="panel right-panel">
-					<div class="panel-padding">
-						<div class="title-text padded-text">Holly Channell</div>
-						<div class="regular-text">Musician. Composer. Educator.</div>
-						<!-- SnapWidget -->
-						<div class="snapwidget-container unselectable" onclick="window.open('https://www.instagram.com/hollychannell/', '_blank');">
-							<iframe 
-								src="https://snapwidget.com/embed/969212" 
-								class="snapwidget-widget snapwidget-desktop" 
-								allowtransparency="true" 
-								frameborder="0" 
-								scrolling="no" 
-								style="border:none; overflow:hidden;  width:100%; ">
-							</iframe>
-							<iframe 
-								src="https://snapwidget.com/embed/969213" 
-								class="snapwidget-widget snapwidget-mobile" 
-								allowtransparency="true" 
-								frameborder="0" 
-								scrolling="no" 
-								style="border:none; overflow:hidden;  width:100%; ">
-							</iframe>
-						</div>
-						<div style="width: 100%; text-align: center;"><a  class="regular-text" href="https://www.instagram.com/hollychannell/" target="_blank">View more on Instagram</a></div>
+				<div class="page-entry centered-text" style="color: white;">
+					<div class="title-text"><br>Not Just a Standard</div>
+					<div class="regular-text">
+						<b>Holly Channell</b>
+						<br>
+						ft. Jason Palmer, Mike Kocour, Ben Hedquist
+						<br><br>
+						<b>Listen now on:</b>
+						<br>
+						<span class="fa fa-spotify"></span>&nbsp;<a href="https://open.spotify.com/artist/1KcNIcPMDgbqE61RVMDmE7" target="_blank">Spotify</a>
+						<br>
+						<span class="fa fa-apple"></span>&nbsp;<a href="https://music.apple.com/us/artist/holly-channell/1761546002" target="_blank">Apple Music</a>
+						<br>
+						<span class="fa fa-link"></span>&nbsp;<a href="https://promo.theorchard.com/ZIGW0rdbRNWXuF6pfpq0" target="_blank">Orchard</a>
+					</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="continue-button"  onclick="location.href='home.html';">
+						Continue&nbsp;to&nbsp;site
 					</div>
 				</div>
 			</div>
-			<!-- Footer -->
-			<div class="footer">
-				<div class="footer-entry footer-entry-first">
-					<div class="small-text padded-text"><b>HOLLY CHANNELL</b></div>
-					<div class="footer-icon unselectable" onclick="window.open('https://www.instagram.com/hollychannell/', '_blank');">
-						<div class="fa fa-instagram"></div>
-					</div>
-					<div class="footer-icon unselectable" onclick="window.open('https://www.facebook.com/hollychannellmusic', '_blank');">
-						<div class="fa fa-facebook"></div>
-					</div>
-					<div class="footer-icon unselectable" onclick="window.open('https://youtube.com/@hollychannell', '_blank');">
-						<div class="fa fa-youtube"></div>
-					</div>
-					<div class="footer-icon unselectable" onclick="window.open('https://open.spotify.com/artist/2AnACP6D24adBgqjRpUHzU', '_blank');">
-						<div class="fa fa-spotify"></div>
-					</div>
-				</div>
-				<div class="footer-entry">
-					<div class="tiny-text"><b>EMAIL</b></div>
-					<div class="small-text"><a class="hidden-link" href="mailto: hollychannellmusic@gmail.com">hollychannellmusic@gmail.com</a></div>
-				</div>
-				<div class="footer-entry footer-entry-last">
-					<div class="tiny-text footer-text">Site content © Holly Channell.<br>Site design © <a href="http://ellisgreenmusic.com" target="_blank">Ellis Green</a>.<br>All rights reserved.</div>
-				</div>
-			</div>			
 		</div>
 	</body>
-	<script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/loaded.js"></script>
 </html>

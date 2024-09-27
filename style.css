@@ -133,7 +133,7 @@ hr {
 .left-panel {
 	background-color: #141414;
 	background-size: cover;
-	background-position: top center;
+	background-position: center;
 	/* Mobile styling */
 	height: 50vh;
 }
@@ -159,22 +159,22 @@ hr {
 	background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,0));
 }
 .home-panel {
-	background-image: url("images/home-image.png");
+	background-image: url("images/home-image.jpg");
 }
 .about-panel {
-	background-image: url("images/about-image.png");
+	background-image: url("images/about-image.jpg");
 }
 .music-panel {
-	background-image: url("images/music-image.png");
+	background-image: url("images/music-image.jpg");
 }
 .calendar-panel {
 	background-image: url("images/calendar-image.jpg");
 }
 .lessons-panel {
-	background-image: url("images/lessons-image.png");
+	background-image: url("images/lessons-image.jpg");
 }
 .contact-panel {
-	background-image: url("images/contact-image.png");
+	background-image: url("images/contact-image.jpg");
 }
 .photos-container {
 	width: 900px;
@@ -295,7 +295,7 @@ hr {
 }
 /* Text */
 .regular-text {
-	font-size: 10pt;
+	font-size: 11pt;
 	line-height: 165%;
 }
 .medium-text {
@@ -368,6 +368,44 @@ hr {
 .hidden-link:hover {
 	text-decoration: underline;
 }
+/* Loading */
+.loading-screen {
+	position: fixed;
+	z-index: 10;
+	background-color: #f2f2f2;
+	width: 100vw;
+	height: 100vh;
+	-webkit-transition: opacity .4s;
+	-o-transition: opacity .4s;
+	transition: opacity .4s;
+}
+.loading-circle {
+	height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid #e6e6e6;
+    border-top: 10px solid #141414;
+    -webkit-animation: spin 1.5s infinite;
+            animation: spin 1.5s infinite;
+	margin: auto;
+	position: absolute;
+	top: 0; 
+	left: 0;
+	bottom: 0; 
+	right: 0;
+}
+@-webkit-keyframes spin { 
+    100% { 
+        -webkit-transform:rotate(360deg); 
+                transform:rotate(360deg); 
+    } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform:rotate(360deg); 
+                transform:rotate(360deg); 
+    } 
+}
 /* Desktop styling */
 @media only screen and (min-width: 960px) {
 	.menu-button {
@@ -400,6 +438,9 @@ hr {
 		overflow-y: auto;	
 		-webkit-box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
 		        box-shadow: 5px -5px 10px rgba(0, 0, 0, .1) inset;
+	}
+	.regular-text {
+		font-size: 12pt;
 	}
 	.photos-panel {
 		width: auto;

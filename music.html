@@ -26,7 +26,12 @@
 		<!-- Title -->
 		<title>Holly Channell: Music</title>
 	</head>
-	<body>
+	<body onload="loaded()">
+		<!-- Loading screen -->
+		<div class="loading-screen unselectable" id="loading-screen">
+			<div class="loading-circle"></div>
+			<div class="loading-circle" style="animation-delay: -.15s"></div>
+		</div>
 		<!-- Sidebar menu button -->
 		<div class="menu-button unselectable" onclick="openMenu();">
 			<div class="menu-button-background"></div>
@@ -36,12 +41,13 @@
 		<div class="overlay" id="overlay" onclick="closeMenu();"></div>
 		<!-- Sidebar menu -->
 		<div class="menu menu-hidden unselectable" id="menu">
-			<div class="menu-link" onclick="location.href='index.html';">HOME</div>
+			<div class="menu-link" onclick="location.href='home.html';">HOME</div>
 			<div class="menu-link" onclick="location.href='about.html';">ABOUT</div>
 			<div class="menu-link menu-link-active" onclick="closeMenu();">MUSIC</div>
 			<div class="menu-link" onclick="location.href='photos.html';">PHOTOS</div>
 			<div class="menu-link" onclick="location.href='calendar.html';">CALENDAR</div>
 			<div class="menu-link" onclick="location.href='lessons.html';">LESSONS</div>
+			<div class="menu-link" onclick="closeMenu();"><span style="opacity: 25%">STORE <span class="fa fa-external-link"></span></span>&nbsp;&nbsp;(COMING SOON)</div>
 			<div class="menu-link" onclick="location.href='contact.html';">CONTACT</div>
 		</div>
 		<!-- Page content -->
@@ -54,6 +60,15 @@
 					<div class="panel-padding">
 						<div class="title-text padded-text">Music</div>
 						<div class="subtitle-text padded-text">Jazz</div>
+						<iframe 
+							src="https://open.spotify.com/embed/album/6Sht9TQKOTwnJfl40x5GtI?utm_source=generator" 
+							width="100%" 
+							height="250" 
+							frameBorder="0" 
+							allowfullscreen="" 
+							allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+						</iframe>
+						<!--
 						<iframe 
 							width="100%" 
 							height="400" 
@@ -79,6 +94,7 @@
 							</a>
 						</div>
 						<hr>
+						-->
 						<div class="subtitle-text padded-text">Singer-songwriter</div>
 						<iframe
 							src="https://show.co/social-unlock/3t0K3ukupZqvQg5ztKaiVL/widget"
@@ -135,4 +151,5 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/loaded.js"></script>
 </html>

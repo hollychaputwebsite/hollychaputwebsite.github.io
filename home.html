@@ -23,8 +23,10 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- SnapWidget -->
+		<script src="https://snapwidget.com/js/snapwidget.js"></script>
 		<!-- Title -->
-		<title>Holly Channell: Photos</title>
+		<title>Holly Channell: Home</title>
 	</head>
 	<body onload="loaded()">
 		<!-- Loading screen -->
@@ -38,50 +40,48 @@
 			<div class="menu-button-icon">≡</div>
 		</div>
 		<!-- Sidebar menu overlay -->
-		<div class="overlay" id="overlay" onclick="closeMenu();">></div>
+		<div class="overlay" id="overlay" onclick="closeMenu();"></div>
 		<!-- Sidebar menu -->
 		<div class="menu menu-hidden unselectable" id="menu">
-			<div class="menu-link" onclick="location.href='home.html';">HOME</div>
-			<div class="menu-link" onclick="location.href='about.html';" >ABOUT</div>
+			<div class="menu-link menu-link-active" onclick="closeMenu();">HOME</div>
+			<div class="menu-link" onclick="location.href='about.html';">ABOUT</div>
 			<div class="menu-link" onclick="location.href='music.html';">MUSIC</div>
-			<div class="menu-link menu-link-active" onclick="closeMenu();">PHOTOS</div>
+			<div class="menu-link" onclick="location.href='photos.html';">PHOTOS</div>
 			<div class="menu-link" onclick="location.href='calendar.html';">CALENDAR</div>
 			<div class="menu-link" onclick="location.href='lessons.html';">LESSONS</div>
 			<div class="menu-link" onclick="closeMenu();"><span style="opacity: 25%">STORE <span class="fa fa-external-link"></span></span>&nbsp;&nbsp;(COMING SOON)</div>
 			<div class="menu-link" onclick="location.href='contact.html';">CONTACT</div>
 		</div>
 		<!-- Page content -->
-		<div class="overlay gallery-overlay unselectable" id="gallery-overlay">
-			<div class="close-button" onclick="closeImage();">×</div>
-			<img class="gallery-full-image" id="gallery-full-image">
-		</div>
-		<div class="page">
+		<div class="page home-page">
 			<div class="panel-container">
-				<div class="panel photos-panel">
-					<div class="photos-container">
-						<div class="panel-padding">
-							<div class="title-text padded-text">Photos</div>
-							<div class="thumbnail-container">
-								<img class="thumbnail" src="images/thumb1.png" onclick="openImage('images/photos1.jpg');"></img>
-								<img class="thumbnail" src="images/thumb2.png" onclick="openImage('images/photos2.jpg');"></img>
-								<img class="thumbnail" src="images/thumb3.png" onclick="openImage('images/photos3.jpg');"></img>
-								<img class="thumbnail" src="images/thumb4.png" onclick="openImage('images/photos4.jpg');"></img>
-								<img class="thumbnail" src="images/thumb5.png" onclick="openImage('images/photos5.jpg');"></img>
-								<img class="thumbnail" src="images/thumb6.png" onclick="openImage('images/photos6.jpg');"></img>
-								<img class="thumbnail" src="images/thumb7.png" onclick="openImage('images/photos7.jpg');"></img>
-								<img class="thumbnail" src="images/thumb8.png" onclick="openImage('images/photos8.jpg');"></img>
-								<img class="thumbnail" src="images/thumb9.png" onclick="openImage('images/photos9.jpg');"></img>
-								<img class="thumbnail" src="images/thumb10.png" onclick="openImage('images/photos10.jpg');"></img>
-								<img class="thumbnail" src="images/thumb11.png" onclick="openImage('images/photos11.jpg');"></img>
-								<img class="thumbnail" src="images/thumb12.png" onclick="openImage('images/photos12.jpg');"></img>
-								<img class="thumbnail" src="images/thumb13.jpg" onclick="openImage('images/photos13.jpg');"></img>
-								<img class="thumbnail" src="images/thumb14.jpg" onclick="openImage('images/photos14.jpg');"></img>
-								<img class="thumbnail" src="images/thumb15.jpg" onclick="openImage('images/photos15.jpg');"></img>
-								<img class="thumbnail" src="images/thumb16.jpg" onclick="openImage('images/photos16.jpg');"></img>
-								<img class="thumbnail" src="images/thumb17.jpg" onclick="openImage('images/photos17.jpg');"></img>
-								<img class="thumbnail" src="images/thumb18.jpg" onclick="openImage('images/photos18.jpg');"></img>
-							</div>
+				<div class="panel left-panel home-panel">
+					<div class="panel-image-gradient"></div>
+				</div>
+				<div class="panel right-panel">
+					<div class="panel-padding">
+						<div class="title-text padded-text">Holly Channell</div>
+						<div class="regular-text">Musician. Composer. Educator.</div>
+						<!-- SnapWidget -->
+						<div class="snapwidget-container unselectable" onclick="window.open('https://www.instagram.com/hollychannell/', '_blank');">
+							<iframe 
+								src="https://snapwidget.com/embed/969212" 
+								class="snapwidget-widget snapwidget-desktop" 
+								allowtransparency="true" 
+								frameborder="0" 
+								scrolling="no" 
+								style="border:none; overflow:hidden;  width:100%; ">
+							</iframe>
+							<iframe 
+								src="https://snapwidget.com/embed/969213" 
+								class="snapwidget-widget snapwidget-mobile" 
+								allowtransparency="true" 
+								frameborder="0" 
+								scrolling="no" 
+								style="border:none; overflow:hidden;  width:100%; ">
+							</iframe>
 						</div>
+						<div style="width: 100%; text-align: center;"><a  class="regular-text" href="https://www.instagram.com/hollychannell/" target="_blank">View more on Instagram</a></div>
 					</div>
 				</div>
 			</div>
@@ -109,22 +109,9 @@
 				<div class="footer-entry footer-entry-last">
 					<div class="tiny-text footer-text">Site content © Holly Channell.<br>Site design © <a href="http://ellisgreenmusic.com" target="_blank">Ellis Green</a>.<br>All rights reserved.</div>
 				</div>
-			</div>
+			</div>			
 		</div>
 	</body>
 	<script type="text/javascript" src="scripts/menu.js"></script>
 	<script type="text/javascript" src="scripts/loaded.js"></script>
-	<script type="text/javascript">
-		let galleryOverlay = document.getElementById("gallery-overlay");
-		let galleryFullImage = document.getElementById("gallery-full-image");
-		function openImage(path) {
-			galleryFullImage.src = path;
-			galleryOverlay.style.opacity = "1";
-			galleryOverlay.style.pointerEvents = "auto";
-		}
-		function closeImage() {
-			galleryOverlay.style.opacity = "0";
-			galleryOverlay.style.pointerEvents = "none";
-		}
-	</script>	
 </html>
